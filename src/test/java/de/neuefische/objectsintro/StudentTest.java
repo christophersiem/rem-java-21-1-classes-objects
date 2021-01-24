@@ -1,5 +1,6 @@
 package de.neuefische.objectsintro;
 
+import de.neuefische.objectsintro.model.Student;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,7 +10,7 @@ class StudentTest {
     @Test
     public void getFirstNameShouldReturnFirstName() {
         //GIVEN
-        Student student = new Student();
+        Student student = new Student("Hans","Meier",8);
         String firstName = "Paul";
 
         //WHEN
@@ -22,7 +23,7 @@ class StudentTest {
     @Test
     public void getLastNameShouldReturnFirstName() {
         //GIVEN
-        Student student = new Student();
+        Student student = new Student("Hans","Meier",8);
         String lastName = "Lustig";
 
         //WHEN
@@ -36,7 +37,7 @@ class StudentTest {
     @Test
     public void getMatriculationNumberShouldReturnMatriculationNumber() {
         //GIVEN
-        Student student = new Student();
+        Student student = new Student("Hans","Meier",8);
         int matriculationNumber = 42;
 
         //WHEN

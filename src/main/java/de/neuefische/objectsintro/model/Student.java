@@ -1,10 +1,17 @@
-package de.neuefische.objectsintro;
+package de.neuefische.objectsintro.model;
 
 public class Student {
 
-    String firstName;
-    String lastName;
-    int matriculationNumber;
+    private String firstName;
+    private String lastName;
+    private int matriculationNumber;
+
+    public Student(String firstName, String lastName, int matriculationNumber){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.matriculationNumber = matriculationNumber;
+
+    }
 
     public String getFirstName() {
         return firstName;
@@ -28,5 +35,9 @@ public class Student {
 
     public void setMatriculationNumber(int matriculationNumber) {
         this.matriculationNumber = matriculationNumber;
+    }
+
+    public String toString() {
+        return "Student: " + firstName +" "+ lastName+", ID:"+matriculationNumber;
     }
 }
