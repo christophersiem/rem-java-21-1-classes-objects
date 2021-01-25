@@ -61,4 +61,16 @@ class StudentTest {
 
     }
 
+    @Test
+    public void equalsMethodShouldReturnTrueWhenAttributesAreEqual() {
+
+        //GIVEN
+        Student student = new Student("Hans", "Meier", 8);
+        Student student2 = new Student("Hans", "Meier", 8);
+
+        //THEN
+        assertEquals(student, student2);
+
+    }
+
 }

@@ -1,5 +1,7 @@
 package de.neuefische.objectsintro.model;
 
+import java.util.Objects;
+
 public class Student {
 
     private String firstName;
@@ -39,5 +41,18 @@ public class Student {
 
     public String toString() {
         return "Student: " + firstName +" "+ lastName+", ID:"+matriculationNumber;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return matriculationNumber == student.matriculationNumber && Objects.equals(firstName, student.firstName) && Objects.equals(lastName, student.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, matriculationNumber);
     }
 }
