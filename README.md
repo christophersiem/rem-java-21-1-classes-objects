@@ -1,4 +1,4 @@
-## See different branches for different exercies
+## See different branches for different exercises
 
 ### task/1_Klassen:
 
