@@ -10,7 +10,7 @@ class StudentTest {
     @Test
     public void getFirstNameShouldReturnFirstName() {
         //GIVEN
-        Student student = new Student("Hans","Meier",8);
+        Student student = new Student("Hans", "Meier", 8);
         String firstName = "Paul";
 
         //WHEN
@@ -23,7 +23,7 @@ class StudentTest {
     @Test
     public void getLastNameShouldReturnFirstName() {
         //GIVEN
-        Student student = new Student("Hans","Meier",8);
+        Student student = new Student("Hans", "Meier", 8);
         String lastName = "Lustig";
 
         //WHEN
@@ -37,7 +37,7 @@ class StudentTest {
     @Test
     public void getMatriculationNumberShouldReturnMatriculationNumber() {
         //GIVEN
-        Student student = new Student("Hans","Meier",8);
+        Student student = new Student("Hans", "Meier", 8);
         int matriculationNumber = 42;
 
         //WHEN
@@ -45,6 +45,20 @@ class StudentTest {
 
         //THEN
         assertEquals(matriculationNumber, student.getMatriculationNumber());
+    }
+
+    @Test
+    public void toStringShouldReturnStringOfObject() {
+        //GIVEN
+        Student student = new Student("Hans", "Meier", 8);
+        String expected = "Student: " + "Hans" + " " + "Meier" + ", ID:" + 8;
+
+        //WHEN
+        String actual = student.toString();
+
+        //THEN
+        assertEquals(expected, actual);
+
     }
 
 }
